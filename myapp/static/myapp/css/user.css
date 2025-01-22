@@ -1,0 +1,59 @@
+.user-items {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.user-items a {     
+    margin-top: 10px;
+    font-size: 1.0em;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #000000;
+    transition: .3s;
+}
+
+
+.nav-items a:hover,
+.nav-items a.active
+ {
+    color: #df5329;     
+}
+
+.separator {
+   content: ""; /* Tworzy pseudo-element */
+   display: inline-block; /* Wstawia element w tej samej linii */
+   width: 1px; /* Szerokość pionowej kreski */
+   height: 40px; /* Wysokość pionowej kreski */
+   background-color: #000000; /* Kolor kreski */
+   margin-right: 10px;    
+}
+
+
+/* Przyciski */
+.btn-log-out {
+   width: 120px;
+   height: 40px;
+   background: linear-gradient(#E9D25C, #B6A346);
+   color: #fff;
+   border: none;
+   outline: none;
+   border-radius: 6px;
+   font-size: 1.0em;
+   cursor: pointer;
+   font-weight: 500;
+}
+
+
+.btn-log-out:hover {
+   background: linear-gradient(#E9D25C, #B6A346);
+}
+
+
+.wrapper {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 1400px;  
+}
+

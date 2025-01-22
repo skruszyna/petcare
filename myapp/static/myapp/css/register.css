@@ -1,0 +1,210 @@
+body {
+    background-color: #BEB275; /* Zielony kolor */
+    margin: 0; /* Usuń marginesy domyślne */
+    padding: 0; /* Usuń odstępy domyślne */
+    font-family: Arial, sans-serif; /* Ustawienie czcionki */
+    display: flex; /* Ustawienie elastycznego kontenera */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    height: 100vh; /* Wysokość na 100% okna przeglądarki */
+}
+
+
+/* Wrapper - centrowanie formularza */
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 700px;
+    background-color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Formularz w środku wrappera */
+.form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.icon-close:hover {
+    background: linear-gradient(#E9D25C, #B6A346);
+}
+
+
+/* Tytuł formularza */
+.form-box h2 {
+    font-size: 2em;
+    color: #404040;
+    text-align: center;
+}
+
+/* Pola wejściowe */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;  /* Odstęp między polami */
+    margin-bottom: 15px;  /* Dodanie marginesu na dole */
+}
+
+.animal {
+    font-size: 1.0em;
+    font-weight: 600;
+    margin-top: 30px;
+
+}
+
+/* Zmiany w .input-box, aby ustawić odpowiednią szerokość */
+.input-box {
+    width: 48%; /* Zmniejszamy szerokość, aby dwa elementy zmieściły się obok siebie */
+    position: relative;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 5px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 60%;
+    left: 5px;
+    transform: translateY(-5%);
+    font-size: 0.9em;
+    color: #404040;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: 5px;
+    font-size: 0.8em;
+    color: black;
+}
+
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #404040;
+    font-weight: 600;
+    padding: 20px 35px 0 5px;
+}
+
+
+
+
+
+
+/* Pamiętaj mnie i zapomniałem hasła */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    font-weight: 500;
+    color: #404040;
+    margin: 30px 0 30px;
+}
+
+
+.remember-forgot label input {
+    accent-color: black ;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: black;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Przyciski */
+.btn {
+    width: 100%;
+    height: 60px;
+    background: black;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Styl dla przycisku, gdy jest wyłączony */
+.btn:disabled {
+    width: 100%;
+    height: 60px;
+    background: rgb(169, 169, 169); /* Szary kolor tła */
+    color: rgb(60, 60, 60); /* Szary kolor tekstu */
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: not-allowed; /* Zmieniamy kursor na 'not-allowed' przy wyłączonym przycisku */
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: linear-gradient(#E9D25C, #B6A346);
+}
+
+.btn:hover:disabled {
+    background: rgb(169, 169, 169); /* Szary kolor tła */
+    color: rgb(60, 60, 60); /* Szary kolor tekstu */
+}
+
+/* Link rejestracji */
+.login-register {
+    text-align: center;
+    margin: 25px 0 10px;
+    font-size: .9em;
+    color: black;
+    font-weight: 500;
+}
+
+.login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}

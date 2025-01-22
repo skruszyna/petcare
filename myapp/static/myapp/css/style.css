@@ -1,0 +1,225 @@
+/* Reset i styl bazowy */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+
+/* Nawigacja */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pasek {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-items {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-items a {
+    padding: 10px 0px 10px 50px;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.nav-items a:hover,
+.nav-items a.active {
+    color: #BEB275;
+}
+
+.icon {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 50px;
+}
+
+.icon a {
+    color: #000000;
+    text-decoration: none;
+    margin: 2px 0;
+    letter-spacing: 1px;
+}
+
+/* Header */
+.header-img {
+    position: relative;
+    height: 100vh;
+    background-image: url("../Images/Projekt\ bez\ nazwy.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    color: #fff;
+}
+
+.header-text h1 {
+    font-size: 3rem;
+    padding-left: 50px;
+    margin-bottom: 10px;
+    color: #000000;
+    text-shadow: 2px 2px 3px #404040;
+}
+
+.header-text p {
+    font-size: 1.2rem;
+    padding-left: 50px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Kontener dla ikon */
+.offer {
+    display: flex;
+    padding-left: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Odstęp między ikonami */
+    margin: 100px 0; /* Odstęp od innych sekcji */
+
+}
+
+.offer-icon1, .offer-icon2, .offer-icon3, .offer-icon4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Szerokość kwadratu */
+    height: 100px; /* Wysokość kwadratu */
+    background-size: cover;
+    background-position: center;
+}
+
+.offer-icon1 {
+    background-image: url('../Components/Component_1.img');
+}
+
+.offer-icon2 {
+    background-image: url('../Components/Component\ 2.png');
+}
+
+.offer-icon3 {
+    background-image: url('../Components/Component\ 3.png');
+}
+
+.offer-icon4 {
+    background-image: url('../Components/Component\ 4.png');
+}
+
+.offer h4 {
+    text-align: center;
+    margin-top: 10px;
+    color: #000000;
+    font-size: 14px; /* Dopasowanie rozmiaru tekstu */
+}
+
+.buttons {
+    display: flex;
+    padding-left: 50px;
+    justify-content: center;
+    gap: 350px; /* Odstęp między ikonami */
+}
+
+.button-style {
+    padding: 10px 20px;
+    width: 200px;
+    background-image: linear-gradient(#E9D25C, #B6A346);
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.button-style:hover {
+    background-color: #BEB275;
+}
+
+
+/* kotek */
+
+.cat-image {
+    position: fixed;
+    bottom: 80px; /* Umiejscowienie obrazka na dole */
+    right: -800px; /* Początkowa pozycja poza ekranem */
+    width: 600px; /* Rozmiar obrazka */
+    height: 600px; /* Rozmiar obrazka */
+    background-image: url('../Images/kot.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: right 2s ease-in-out; /* Animacja wysuwania */
+
+}
+
+.cat-image.active {
+    right: -50px; /* Docelowa pozycja obrazka */
+}
+
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-text p {
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .offer {
+        flex-direction: column;
+        gap: 50px; /* Zmniejszony odstęp */
+    }    
+}
+
+@media (max-width: 1200px) {
+    .cat-image {
+        opacity: 0; /* Ukryj obrazek stopniowo */
+        right: -800px;
+    }
+}

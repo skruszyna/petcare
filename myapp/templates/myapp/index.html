@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+
+</head>
+<body>
+    <nav>
+        <div class="wrapper"> 
+            <div class="pasek">
+                <div class="icon">
+                    <a href="#activeLink">Profesjonalne usługi</a><br> 
+                    <a href="#activeLink">zoologiczne <b>Pet Care</b> </a>
+                </div>
+            
+                <div class="nav-items">
+                    <a href="#aboutUs" class="active">O nas</a>
+                    <a href="#Offer">Oferta</a>
+                </div>  
+            </div>
+        </div>
+     </nav> 
+
+    <header>
+        <div id="activeLink" class="header-img">
+            <div class="header-text">
+                <h1>Pet<span> Care</span></h1>
+                <p>Profesjonalna opieka dla Twojego zwierzaka</p>
+            </div>
+
+            <div class="cat-image"></div>
+
+            <div class="offer">
+                <div class="offer-item">
+                    <div class="offer-icon1"></div>
+                    <h4>Salon</h4>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-icon2"></div>
+                    <h4>Hotel</h4>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-icon3"></div>
+                    <h4>Szkolenia</h4>
+                </div>
+                <div class="offer-item">
+                    <div class="offer-icon4"></div>
+                    <h4>Nasi weterynarze</h4>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <a href="{% url 'register' %}" class="button-style">Zarejestruj</a>
+                <a href="{% url 'login' %}" class="button-style">Zaloguj</a>
+            </div>
+        </div>
+
+        
+
+    </header>
+
+    <footer>
+        <p> &copy; 2120 ArchiStudio <span class="icon-box">
+            <a href="#"><i class=" fab fa-facebook-square"></i></a>
+            <a href="#"><i class=" fab fa-instagram-square"></i></a>
+            <a href="#"><i class=" fab fa-twitter-square"></i></a>
+        </span></p>
+    </footer>
+
+    <script src="{% static 'myapp/js/script.js' %}"></script>    
+</body>
+</html>

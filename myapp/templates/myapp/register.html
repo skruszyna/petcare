@@ -1,0 +1,89 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Login</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/css/register.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+
+        <span class="icon-close" id="close-icon"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box register">
+            <h2>Rejestracja</h2>
+            <form action="#">
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" required id="name-input">
+                        <label>Imię</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" required id="last-input">
+                        <label>Nazwisko</label>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" required id="email-input">
+                        <label>E-mail</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="number" required id="number-input">
+                        <label>Numer telefonu</label>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="password" required id="password-input">
+                        <label>Hasło</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" required id="sec-password-input">
+                        <label>Powtórz hasło</label>
+                    </div>
+                </div>
+                
+                <h4 class="animal">Dane pupila (opcjonalne)</h4>
+                
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Imię pupila</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Wiek</label>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Gatunek</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" required>
+                        <label>Rasa</label>
+                    </div>
+                </div>
+                <div class="remember-forgot">
+                    <label>
+                        <input type="checkbox"> W ramach rejestracji w systemie PetCare wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z przepisami Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. (RODO) oraz obowiązującymi przepisami prawa krajowego.
+                    </label>
+                </div>
+                <button type="submit" id="register-btn" class="btn" disabled>Zarejestruj się</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    
+    <script src="{% static 'myapp/js/script.js' %}"></script>    
+</body>
+</html>
